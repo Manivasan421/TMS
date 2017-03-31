@@ -1,0 +1,15 @@
+CREATE TABLE  `kumaran`.`AnyDayTask1` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `Date` int(10) unsigned NOT NULL,
+  `Project` varchar(45) NOT NULL,
+  `Task` varchar(45) NOT NULL,
+  `Product` varchar(45) NOT NULL,
+  `TaskDescription` varchar(45) NOT NULL,
+  `Assignhours` int(10) unsigned NOT NULL,
+  `Actualhours` int(10) unsigned NOT NULL,
+  `Status` varchar(45) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `kumaran`.`anydaytask1`;

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+var i=4;
+ var string;
+ var string1;
+for(var j=0;j<i;j++){
+	if(j<i-1){
+  string='{ "id" : "'+j+'"},';
+  string1=string1+string;}
+	else{
+		string='{ "id" :"'+j+'"}';
+		  string1=string1+string;
+	}
+  }
+  alert(string1.replace("undefined",''));
+
+</script>
+</body>
+</html>

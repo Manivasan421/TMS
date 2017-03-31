@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="main.java.ProjectResource"
+        table="project1" catalog="Project">
+
+        <id name="projectid" type="int">
+            <column name="projectid" />
+            <generator class="identity" />
+        </id>
+        <property name="date" type="timestamp">
+            <column name="date" length="45" not-null="true" />
+        </property>
+        <property name="month" type="string">
+            <column name="name" length="19" not-null="true" />
+        </property>
+        
+        <property name="projectname" type="string">
+            <column name="ProjectName" not-null="true" />
+        </property>
+        <property name="created" type="string">
+            <column name="CreatedBy" length="45" not-null="true" />
+        </property>
+        <property name="startdate" type="timestamp">
+            <column name="Start_DAte" length="19" not-null="true" />
+        </property>
+        
+        <property name="enddate" type="timestamp">
+            <column name="End_DATE" length="19" not-null="true" />
+        </property>
+          <property name="status" type="string">
+            <column name="Status" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

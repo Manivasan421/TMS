@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+		
+		<script>
+$(document).ready(function(){
+ 
+    $("#show").hide();
+   $("#now").click(function(){
+        $("#show").hide();
+    });
+    $("#later").click(function(){
+        $("#show").show();
+    });
+});
+</script>
+
+<style>
+.edit{
+color:black;
+}
+
+
+.second
+{
+border: #999 1px solid;
+width:auto;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.col-sm-6 forms-right-icons,.row{
+margin-right: -70px;
+margin-top: -10px;
+}
+form#contact121 {
+    padding: 5%;
+    background: #f1f1f1;
+    outline: 6px solid rgba(34, 34, 34, 0.08);
+    position: relative;
+    margin-left: -180px;
+    width: 600px;
+}
+
+</style>
+   
+   </head>
+
+    <body class="background">
+	<div class="second">
+    <div id="tf-home">
+        <div class="overlay">
+            <div id="sticky-anchor"></div>
+            <nav id="tf-menu" class="navbar navbar-default">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand logo" href="index.html"><label id="name"></label></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav navbar-right">
+                      <li><a href="dashboard.html">Home</a></li>
+                        <li><a href="campaignview.jsp">Campaigns</a></li>							
+							<li><a href="contacts.html">Contacts</a></li>
+							<li><a href="https://www.constantcontact.com/features">About</a></li>
+							<li><a href="#tf-service">Logout</a></li>
+                      </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+			</div>
+			</div>
+			
+        <!-- Top content -->
+        <div class="top-content">
+        	<div class="container">
+                	
+                
+                
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1 show-forms">
+                    	<span class="show-register-form active">Campaign </span> 
+                    
+                    </div>
+                </div>
+                
+                <div class="row register-form">
+                    <div class="col-sm-4 col-sm-offset-1">
+                    <div class="form-group" style="background-color: white;" id="check">
+	                    		<label class="sr-only" for="r-form-first-name">Enter subject</label>
+	                        	 
+	                        </div>
+						 	<div class="form-group">
+	                    		<label class="sr-only" for="r-form-first-name">Enter subject</label>
+	                        	<input type="text" name="r-form-first-name" placeholder="Campaign Name" class="r-form-first-name form-control" id="campaign_name">
+	                        </div>
+						 	
+	                    	<div class="form-group">
+	                    		<label class="sr-only" for="r-form-first-name">Enter subject</label>
+	                        	<input type="text" name="r-form-first-name" placeholder="Enter subject" class="r-form-first-name form-control" id="text">
+	                        </div>
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="r-form-last-name">From Name:</label>
+	                        	<input type="text" name="r-form-last-name" placeholder="Last name..." class="r-form-last-name form-control" id="pwd">
+	                        </div>
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="r-form-email">From Email Address:</label>
+	                        	<input type="text" name="r-form-email" placeholder="From Email Address..." class="r-form-email form-control" id="r-form-email">
+	                        </div>
+	                       <div class="form-group">
+	                        	<label class="sr-only" for="r-form-email">Reply to Email Address:</label>
+	                        	<input type="text" name="r-form-email" placeholder="Reply to Email Address.." class="r-form-email form-control" id="r-form-email">
+	                        </div>
+							<div class="form-group">
+							<p style="color:white;">Physical Address:This will appear in the footer of your email.</p><br>
+								<div id="output">
+								</div> 
+								<a href="#" id="myBtn"><h4>Edit</h4></a>
+								</div>
+				            <button type="submit" class="btn"  onclick="sendme()">Create Campaign!</button>
+					 
+                    </div>
+                    <div class="col-sm-6 forms-right-icons">
+						<div class="row">
+							<div class="col-sm-2 icon"><i class="fa fa-pencil"></i></div>
+							<div class="col-sm-10">
+								
+								
+								
+								<div class="u-block b2-u-tableCell u-valignTop b2-u-size1of3" style="min-width:220px;">
+
+                    
+                    <div class="Well Well--light Well--thin">
+                      <h1 style="color:white" class="Form-heading Form-heading--large">When To Send:</h1>
+
+                      
+                      <div id="nowBox" class="u-marginBottom">
+                        
+                        <input type="radio" value="now" id="now" name="when" class="Form-radio">
+                        <label id="nowLabel" class="u-marginBottomFlush" for="now" data-qe-id="">Send now</label>
+                        <br><span id="timeToSendMsg" class="u-hide u-zeta"></span>
+                        
+
+                      </div>
+                      
+                      <div id="laterBox" class="u-marginBottom">
+
+                        
+                        <input type="radio" value="later" id="later" name="when" class="Form-radio">
+                        <label for="later" id="laterLabel" data-qe-id="">Schedule For Later</label>
+                        
+                        
+                       
+      
+
+                      </div>
+                  
+                      
+                      <div id="show">
+                        <h1 class="Form-heading Form-heading--large"  style="color:white" >Additional Options:</h1>
+
+                        <div class="u-marginBottomHalf" data-sct-link-location="body">
+                          <input type="checkbox" id="earlyResultsReportCb" class="Form-checkbox trackable" data-tracked-action="checkbox click_send early results" checked="checked">
+                          <label for="earlyResultsReportCb">Send me Early Results</label>
+								
+								<div>
+								 <label for="date">Date</label><br>
+							<input type="date" style="color:black">
+								
+							
+					  
+                      </div><br>
+					  <label for="select">Time IST</label><br>
+                        <select style="color:black" class="selectpicker">
+							<option>--</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+						</select> 
+						<select style="color:black" class="selectpicker">
+							<option>--</option>
+							<option>00</option>
+							<option>05</option>
+							<option>10</option>
+							<option>15</option>
+							<option>20</option>
+							<option>25</option>
+							<option>30</option>
+							<option>35</option>
+							<option>40</option>
+							<option>45</option>
+							<option>50</option>
+							<option>55</option>
+						
+						</select> 
+						<select style="color:black" class="selectpicker">
+							<option>AM</option>
+							<option>PM</option>
+						</select>
+						<br>
+ 
+                              </div>
+                            </div>
+
+                            <div class="u-block b3-u-tableCell b3-u-textRight u-marginRightFlush u-paddingRightFlush">
+                                  
+                                  <button type="button" class="btn btn-info"  name="verify-email-button" id="verify-earlyResults-email" data-qe-id="">Submit</button>
+                                  <div id="track-verify-early-results-email" class="u-hide trackable" data-tracked-action="add another email_early results address_verify"></div>
+                                </div>
+                            
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>						
+			  </div>
+           </div>
+         </div>
+   </div>
+ 
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+		<span class="close">&times;</span>
+    <div id="tf-contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Physical Address </h2><h5><b>*</b>Required fields</h5>
+                <p>According to US law, the email sender's physical address must be included in any commercial mail.</p>
+                <hr>
+            </div>
+            <div class="space"></div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <form id="contact121">
+					
+					<div class="form-group">
+                        <input type="text" class="form-control" id="Name" placeholder="Name">
+                      </div>
+					
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="First" placeholder="First Line of your address">
+                      </div>
+					  
+					  <div class="form-group">
+                        <input type="text" class="form-control" id="Second" placeholder="Second Line of your address">
+                      </div>
+					  
+					  <div class="form-group">
+                        <input type="text" class="form-control" id="Third" placeholder="Third Line of your address">
+                      </div>
+					  
+					  <div class="form-group">
+                        <input type="text" class="form-control" id="City" placeholder="City">
+                      </div>
+					  
+					  <div class="form-group">
+                        <input type="text" class="form-control" id="State" placeholder="State/Province/Region">
+                      </div>
+					  
+					  <div class="form-group">
+                        <input type="text" class="form-control" id="Code" placeholder="Zip Code">
+                      </div>
+					  
+					  <div class="form-group">
+                        <input type="text" class="form-control" id="country" placeholder="select country">
+                      </div>
+					  
+					  <div class="form-group">
+                        <input type="text" class="form-control" id="Optional" placeholder="Optional e.g. Telephone, 2nd Address, Website URL
+ ">
+                      </div>
+					   
+					  <a href="createcampaign.html" class="btn btn-primary my-btn dark" >Cancel</a>
+					   
+                      <button type="submit" class="btn btn-primary my-btn dark" onclick="getwords()">Save List</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>          
+
+	</div>
+   </div>
+ 
+        <!-- Footer -->
+      <nav id="tf-footer">
+        <div class="container">
+             <div class="pull-left">
+                <p>2017 © Awesomess. All Rights Reserved. Designed and Coded by <a href="http://kumaran.com/">Kumaran</a> for <a href="https://campaign-ui.constantcontact.com">Constant Contact.Com</a></p>
+            </div>
+            <div class="pull-right"> 
+                <ul class="social-media list-inline">
+                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                    <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                    <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                    <li><a href="#"><span class="fa fa-behance"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	</div>
+	
+	<script>
+	// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get [the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// pop up display code
+function getwords(){
+
+myOutput=document.getElementById('output');
+var Name = document.getElementById('Name').value;
+var First = document.getElementById('First').value;
+var Second = document.getElementById('Second').value;
+var Third = document.getElementById('Third').value;
+var City = document.getElementById('City').value;
+var State = document.getElementById('State').value;
+var Code = document.getElementById('Code').value;
+var country = document.getElementById('country').value;
+var Optional = document.getElementById('Optional').value;
+
+
+if (Name != ""||First!= ""||Second!= ""||Third != ""||City != ""||State != ""||Code != ""||country != ""){
+myOutput.innerHTML="You entered:  "+"<br>" + "Name: &nbsp&nbsp&nbsp"+ Name +"<br>" +"Address: &nbsp&nbsp&nbsp"+ First +"<br>"+Second +"<br>"+Third + "<br>"+"City: &nbsp&nbsp&nbsp"+City +"<br>"+"state: &nbsp&nbsp&nbsp"+ State +"<br>"+"zip code: &nbsp&nbsp&nbsp"+Code +"<br>"+"Country:  &nbsp&nbsp&nbsp"+country +"<br>"+"optionals: &nbsp&nbsp&nbsp"+Optional;
+}
+else{
+alert("Please fill all the fields!");
+
+}
+}
+
+</script>
+
+<!-- <script>
+ 
+sessionStorage.getItem("website");
+sessionStorage.getItem("organization_name");
+sessionStorage.getItem("time_zone");
+sessionStorage.getItem("first_name");
+sessionStorage.getItem("last_name");
+sessionStorage.getItem("email");
+sessionStorage.getItem("phone");
+sessionStorage.getItem("country_code");
+sessionStorage.getItem("state_code");
+sessionStorage.getItem("city");
+sessionStorage.getItem("line1");
+sessionStorage.getItem("postal_code");
+sessionStorage.getItem("country_code");
+
+
+</script> -->
+	
+	<script>
+	var campaignid;
+	$('#name').text(sessionStorage.getItem("email"));
+	
+	var content=sessionStorage.getItem("sl");
+
+	var token1=sessionStorage.getItem("token"); 
+	
+											$.ajax({
+												type : "GET", 
+												contentType : "application/json",
+												url : 'https://api.constantcontact.com/v2/lists?api_key=mfu59tfskc9j5yxz74mggqfp&access_token=edbb7c0f-cb8f-41c1-bcd0-9532d2b9c74e', 
+												dataType : 'json',
+												success: function(response) {
+												var ids=JSON.parse(JSON.stringify(response));
+											 var idCounter=0;
+												for (var key in ids){
+												  var obt2=ids[key];
+												  var id =null;
+												  var name=null; 
+												  for(var key2 in obt2){
+																	if(key2=='id'){
+																   id=obt2[key2];
+																   }
+																   if(key2=='name'){
+																   name=obt2[key2];
+																   }
+																 
+													}
+													 
+													 if(id !=null && name !=null){
+													   $("#check").append ( "<input id='chk_" + idCounter + "' type='checkbox' value='" + id + "' />&ndbs&ndbs&ndbs&ndbs<label for='chk_" + idCounter + "'>" + name + "</label><br>" );
+														$('#getcheck1').val(idCounter);
+										idCounter ++; 
+													}
+													
+												}
+										
+												
+												
+												}
+										
+										});
+										
+										/* $('#getcheck').click(function(){
+										var count=$('#getcheck1').val();
+										
+										count++;
+										alert(count);
+										var myArray=new Array(count);
+										var i=0;
+										for ( var j = 0; j < count; j++){ 
+										var check=$('input:checkbox[id=chk_'+j+']').is(':checked');
+										if(check==true){
+										myArray[i]=$('input:checkbox[id=chk_'+j+']').val();
+										i++;
+										}
+										}
+										alert('check '+" "+myArray[0]);
+										alert('check '+" "+myArray[1]);   alert('check '+" "+myArray[2]);   alert('check '+" "+myArray[3]);
+										 
+										}); */
+
+	
+	
+	
+	
+	
+	
+				var campaigns = {};
+
+			function sendme()
+			{
+				
+				
+				var count=$('#getcheck1').val();
+				
+				count++;
+				var myArray=new Array(count);
+				var i=0;
+				for ( var j = 0; j < count; j++){ 
+				var check=$('input:checkbox[id=chk_'+j+']').is(':checked');
+				if(check==true){
+				myArray[i]=$('input:checkbox[id=chk_'+j+']').val();
+				i++;
+				}
+				}
+			 
+				 var string;
+				 var string1="[{ ";
+				for(var j=0;j<i;j++){
+					if(j<i-1){
+				  string=' "id" : "'+myArray[j]+'" } , {';
+				  string1=string1+string;}
+					else{
+						string=' "id" : "'+myArray[j]+'" }]';
+						  string1=string1+string;
+					}
+				  }
+				  alert(string1);
+			$('#con').val(string1);
+				
+				/* campaigns["name"]=$('#campaign_name').val();
+				campaigns["subject"]=$('#text').val();
+				campaigns["from_name"] = $('#fn').val();
+				campaigns["from_email"] = $('#fe').val();
+				campaigns["reply_to_email"] = $('#re').val();
+				campaigns["organization_name"] =$('#Name').val();
+				campaigns["address_line_1"] =$('#First').val();
+				campaigns["address_line_2"] =$('#Second').val();
+				campaigns["address_line_3"] =$('#Third').val();
+				campaigns["city"] =$('#City').val();
+				campaigns["state"] =$('#State').val();
+				campaigns["international_state"] =$('#State').val();
+				campaigns["postal_code"] =$('#Code').val();
+				campaigns["country"] =$('#country').val();
+				campaigns["email_content"]= "<html><body><p>This is text of the email message.</p></body></html>";
+				compagins["message_footer": {
+			        "organization_name": "My Organization",
+			        "address_line_1": "123 Maple Street",
+			        "address_line_2": "Suite 1",
+			        "address_line_3": "",
+			        "city": "Anytown",
+			        "state": "MA",
+			        "international_state": "",
+			        "postal_code": "01444",
+			        "country": "US",
+			        "include_forward_email": true,
+			        "forward_email_link_text": "Click here to forward this message",
+			        "include_subscribe_link": true,
+			        "subscribe_link_text": "Subscribe to Our Newsletter!"
+			    }; */
+			    
+			    campaigns["name"]= "abb1cdewrefe",
+			    	campaigns["subject"]= "Subject Test",
+			    		campaigns["from_name"]= "My Organization",
+			    			campaigns["from_email"]= "vasanmp421@gmail.com",
+			    				campaigns["reply_to_email"]= "vasanmp421@gmail.com",
+			    					campaigns["is_permission_reminder_enabled"]= true,
+			    						campaigns["permission_reminder_text"]= "As a reminder, you're receiving this email because you have expressed an interest in MyCompany. Don't forget to add from_email@example.com to your address book so we'll be sure to land in your inbox! You may unsubscribe if you no longer wish to receive our emails.",
+			    							campaigns["is_view_as_webpage_enabled"]= true,
+			    								campaigns["view_as_web_page_text"]= "View this message as a web page",
+			    									campaigns["view_as_web_page_link_text"]= "Click here",
+			    										campaigns["greeting_salutations"]= "Hello",
+			    											campaigns["greeting_name"]= "FIRST_NAME",
+			    												campaigns["greeting_string"]= "Dear ",
+			    													campaigns["email_content"]= "<html><body><p>This is text of the email message.</p></body></html>",
+			    														campaigns["text_content"]= "This is the text-only content of the email message for mail clients that do not support HTML.",
+			    															campaigns["email_content_format"]= "HTML",
+			    																campaigns["style_sheet"]= "",
+			    																	campaigns["message_footer"]= {
+			        "organization_name": "My Organization",
+			        "address_line_1": "123 Maple Street",
+			        "address_line_2": "Suite 1",
+			        "address_line_3": "",
+			        "city": "Anytown",
+			        "state": "MA",
+			        "international_state": "",
+			        "postal_code": "01444",
+			        "country": "US",
+			        "include_forward_email": true,
+			        "forward_email_link_text": "Click here to forward this message",
+			        "include_subscribe_link": true,
+			        "subscribe_link_text": "https://developer.constantcontact.com/"
+			         
+			    },
+			    campaigns["tracking_summary"]= {
+			        "sends": 0,
+			        "opens": 0,
+			        "clicks": 0,
+			        "forwards": 0,
+			        "unsubscribes": 0,
+			        "bounces": 0
+			    },
+			    campaigns["sent_to_contact_lists"]= [{
+			        "id": "1423177498"
+			    }, {
+			        "id": "1174957284"
+			    }, {
+			        "id": "1077761054"
+			    }]
+			    
+			    											 
+			    
+			  
+				$.ajax({
+					type : "POST",
+					contentType : "application/json",
+					url : 'https://api.constantcontact.com/v2/emailmarketing/campaigns?api_key=mfu59tfskc9j5yxz74mggqfp&access_token=edbb7c0f-cb8f-41c1-bcd0-9532d2b9c74e', 
+					data : JSON.stringify(campaigns), 
+					dataType : 'json',
+					timeout : 100000,
+					success: function(response) {
+						campaignid=response["id"];
+						 
+						alert("created");
+					}
+					});
+				
+				} 
+			$('#verify-earlyResults-email').click(function(){
+				var schedules={};
+				schedules["scheduled_date"]= "2017-03-01T09:00:43.626Z";
+				$.ajax({
+					type : "POST",
+					contentType : "application/json",
+					url : "https://api.constantcontact.com/v2/emailmarketing/campaigns/"+campaignid+"/schedules?api_key=mfu59tfskc9j5yxz74mggqfp&access_token=edbb7c0f-cb8f-41c1-bcd0-9532d2b9c74e',
+					data : JSON.stringify(schedules),
+					dataType : "json",
+					success : function(response){
+						alert("schedule");
+					}
+				});
+			});
+			
+			
+			
+</script>
+ <input type="hidden" id="getcheck1" value="">
+  <input type="hidden" id="con" value="">
+    </body>
+
+</html>

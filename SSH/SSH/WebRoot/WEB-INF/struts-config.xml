@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="customerForm"
+		      type="main.java.ProjectForm" />
+
+		<form-bean name="dynaCustomerListForm"
+		      type="org.apache.struts.action.DynaActionForm">
+		      <form-property name="projectid" type="java.util.Integer"/>
+		      <form-property name="date" type="java.util.Date"/>
+		      <form-property name="month" type="java.util.String"/>
+		      <form-property name="projectdetail" type="java.util.String"/>
+		      <form-property name="created" type="java.util.String"/>
+		      <form-property name="startdate" type="java.util.Date"/>
+		      <form-property name="enddate" type="java.util.Date"/>
+		      <form-property name="status" type="java.util.String"/>
+		</form-bean>
+
+	</form-beans>
+
+	<action-mappings>
+
+	  <action input="/customer.jsp" name="dynaCustomerListForm" path="/validate" scope="session" type="main.java.AddProject" parameter="operation">
+            <forward name="success" path="/customer.jsp" />
+            <forward name="failure" path="/failure.jsp" />
+        </action>
+        
+        <action input="/customer.jsp" name="dynaCustomerListForm" path="/validate" scope="session" type="main.java.AddProject" parameter="operation">
+            <forward name="success" path="/customer.jsp" />
+            <forward name="failure" path="/failure.jsp" />
+        </action>
+        
+        <action input="/customer.jsp" name="dynaCustomerListForm" path="/validate" scope="session" type="main.java.AddProject" parameter="operation">
+            <forward name="success" path="/customer.jsp" />
+            <forward name="failure" path="/failure.jsp" />
+        </action>
+
+		
+      </action-mappings>
+
+	<!-- <message-resources
+		parameter="com.mkyong.customer.properties.Customer" /> -->
+
+ 	<!-- Spring Struts plugin -->
+ 	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+		value="main.resources.config/SpringBeans.xml" />
+  	</plug-in>
+
+</struts-config>

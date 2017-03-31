@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+
+    <form-beans>
+        <form-bean name="branchForm" type="bean.loadvalues"/>
+    </form-beans>
+ 
+	<action-mappings>
+		<action name="lg" path="/login"
+			type="controllers.LoginController" input="/Login.jsp">
+			<forward name="success" path="/Content.jsp" />
+			<forward name="failure" path="/Login.jsp" />
+		</action>
+
+		<action path="/Load" scope="request" type="controllers.LoadNameController">
+		</action>
+		<action path="/LoadId" scope="request" type="controllers.LoadIdController">
+		</action>
+		<action  path="/LoadEmployee" name="branchForm" type="controllers.LoadEmployeeController" input="/Employee Details.jsp" parameter="mehtod" scope="request">
+			<forward name="success" path="/Employee Details.jsp" redirect="true" />
+		</action>
+		 <action  path="/LoadEmployee" name="branchForm" type="controllers.LoadEmployeeController" input="/Employee Details.jsp" parameter="method" scope="request">
+			<forward name="success" path="/Employee Details.jsp" redirect="true" />
+		</action> 
+		 <action  path="/LoadEmployee" name="branchForm" type="controllers.LoadEmployeeController" input="/Employee Details.jsp" parameter="method" scope="request">
+			<forward name="success" path="/Employee Details.jsp" redirect="true" />
+		</action> 
+	</action-mappings>
+</struts-config>
+  
